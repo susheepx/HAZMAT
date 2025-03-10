@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public class ToggleMediaPlayer : MonoBehaviour
 {
     public GameObject musicDisplay;
+    public GameObject player;
     public AudioSource currentSong;
     public List<AudioClip> songQueue = new List<AudioClip>();
     public int clipNum = 0;
@@ -27,7 +28,7 @@ public class ToggleMediaPlayer : MonoBehaviour
         // musicDisplay.SetActive(false);
         Time.timeScale = 1;
         PopulatePlaylist();
-        currentSong = GetComponent<AudioSource>();
+        currentSong = player.GetComponent<AudioSource>();
         if (currentSong.clip != null) {
             seekSlider.maxValue = currentSong.clip.length;
         }

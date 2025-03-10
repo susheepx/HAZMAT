@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CharacterMovementManager : MonoBehaviour
 {
@@ -35,9 +34,6 @@ public class CharacterMovementManager : MonoBehaviour
 
     [HideInInspector] public Animator anim;
 
-    //key press checks
-    public Button mediaPlayer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +47,6 @@ public class CharacterMovementManager : MonoBehaviour
     {
         GetDirectionAndMove();
         Gravity();
-        checkKeys();
         anim.SetFloat("hzInput", hzInput);
         anim.SetFloat("vInput", vInput);
 
@@ -90,10 +85,4 @@ public class CharacterMovementManager : MonoBehaviour
         Gizmos.DrawWireSphere(spherePos, controller.radius - 0.05f);
     }
 
-    private void checkKeys() {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            mediaPlayer.onClick.Invoke(); 
-        }
-    }
 }

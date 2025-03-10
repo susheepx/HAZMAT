@@ -393,6 +393,7 @@
 "Assets/Scripts/MusicPlayerManager.cs"
 "Assets/Scripts/StartScreenManager.cs"
 "Assets/Scripts/TestScript.cs"
+"Assets/UIManager.cs"
 -langversion:9.0
 
 /deterministic
